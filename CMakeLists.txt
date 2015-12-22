@@ -19,8 +19,9 @@ if(NOT MSVC)
 endif()
 
 install(TARGETS stb_image
-  LIBRARY DESTINATION lib
-  RUNTIME DESTINATION lib)
+  RUNTIME DESTINATION lib
+  ARCHIVE DESTINATION lib # for .lib files on Windows
+  LIBRARY DESTINATION lib)
 
 install(FILES stb_image.h stb_image_resize.h stb_image_write.h DESTINATION include)
 
